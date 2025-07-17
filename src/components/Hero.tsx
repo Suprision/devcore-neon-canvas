@@ -7,13 +7,10 @@ const Hero = () => {
       
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
         <div className="mb-8">
-          <div className="flex justify-center mb-6">
-            <img 
-              src="/lovable-uploads/0da6e8e7-2103-47a8-8d7f-ebecb94fd757.png" 
-              alt="DevCore Logo" 
-              className="w-48 h-48 md:w-64 md:h-64 animate-neon-pulse hover:scale-110 transition-transform duration-300"
-            />
-          </div>
+          <h1 className="text-6xl md:text-8xl font-black mb-6 tracking-wider">
+            <span className="text-neon-green animate-neon-pulse">DEV</span>
+            <span className="text-neon-blue">CORE</span>
+          </h1>
           <div className="h-1 w-32 bg-neon-green mx-auto mb-8 neon-glow"></div>
         </div>
         
