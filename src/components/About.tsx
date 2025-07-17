@@ -6,19 +6,19 @@ const About = () => {
       icon: Code,
       title: "Expert Development",
       description: "Clean, efficient code that scales with your business needs",
-      color: "text-neon-cyan"
+      color: "text-neon-green"
     },
     {
       icon: Palette,
       title: "Creative Design",
       description: "Stunning visuals that capture your brand's essence",
-      color: "text-neon-magenta"
+      color: "text-neon-blue"
     },
     {
       icon: Zap,
       title: "Performance Focus",
       description: "Lightning-fast solutions built for modern web standards",
-      color: "text-neon-purple"
+      color: "text-neon-green"
     }
   ];
 
@@ -27,11 +27,11 @@ const About = () => {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-black mb-6">
-            <span className="text-neon-cyan">WHO</span>{" "}
+            <span className="text-neon-green">WHO</span>{" "}
             <span className="text-foreground">WE</span>{" "}
-            <span className="text-neon-magenta">ARE</span>
+            <span className="text-neon-blue">ARE</span>
           </h2>
-          <div className="h-1 w-24 bg-neon-cyan mx-auto mb-8 neon-glow"></div>
+          <div className="h-1 w-24 bg-neon-green mx-auto mb-8 neon-glow"></div>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             DevCore is a cutting-edge development studio specializing in creating 
             exceptional digital experiences. We combine technical expertise with 
@@ -43,9 +43,9 @@ const About = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="group relative p-8 rounded-xl gradient-card border border-muted hover:border-neon-cyan transition-all duration-300 hover:scale-105"
+              className="group relative p-8 rounded-xl gradient-card border border-muted hover:border-neon-green transition-all duration-300 hover:scale-105"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-neon-cyan/5 to-neon-magenta/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-neon-green/5 to-neon-blue/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               
               <div className="relative z-10">
                 <feature.icon className={`w-12 h-12 ${feature.color} mb-6 group-hover:scale-110 transition-transform duration-300`} />
