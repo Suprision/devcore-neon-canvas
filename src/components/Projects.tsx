@@ -1,29 +1,33 @@
-import { ExternalLink, Github, Play } from "lucide-react";
+import { ExternalLink, Github, Play } from "lucide-react"; // Play icon is no longer strictly needed for the video, but can be kept for other purposes
 
 const Projects = () => {
+  // --- Updated Projects Data with videoUrl ---
   const projects = [
     {
       title: "LinuxChooser",
-      description: "An intelligent survey platform that analyzes user preferences and system requirements to recommend the perfect Linux distribution. Features interactive questionnaires, detailed compatibility analysis, and personalized recommendations.",
+      description: "An intelligent survey platform that analyzes user preferences and system requirements to recommend the perfect Linux distribution. Features interactive questionnaires, detailed compatibility analysis, and personalized recommendations. We used:",
       tags: ["React", "TypeScript", "Algorithm", "Survey Engine"],
-      gradient: "from-neon-green/20 to-neon-blue/20"
+      gradient: "from-neon-green/20 to-neon-blue/20",
+      videoUrl: "/videos/linuxchooser-preview.mp4", // Path to your video in public folder
     },
     {
       title: "ConvertX",
-      description: "Revolutionary file conversion platform supporting traditional formats and creative extensions like .banana and .latte. Converting XLSX to MP3 or PDF to MP4? No problem. The ultimate universal converter.",
-      tags: ["Node.js", "WebAssembly", "File Processing", "API"],
-      gradient: "from-neon-blue/20 to-neon-green/20"
+      description: "Revolutionary file conversion platform supporting traditional formats and creative extensions like .banana and .latte. Converting XLSX to MP3 or PDF to MP4? No problem. The ultimate universal converter. We used:",
+      tags: ["Node.js", "WebAssembly", "React", "APIs"],
+      gradient: "from-neon-blue/20 to-neon-green/20",
+      videoUrl: "/videos/convertx-preview.mp4", // Path to your video in public folder
     },
     {
       title: "USB Backup Pro",
-      description: "Seamless backup solution for USB drives and local folders. Simply insert your drive, select it, and get a comprehensive zip backup ready for download. Perfect for data protection and migration.",
-      tags: ["Electron", "File System", "Compression", "Desktop App"],
-      gradient: "from-neon-green/20 to-neon-blue/20"
+      description: "Seamless backup solution for USB drives and local folders. Simply insert your drive, select it, and get a comprehensive zip backup ready for download. Perfect for data protection and migration. We used:",
+      tags: ["React", "TypeScript", "Libraries", "APIs"],
+      gradient: "from-neon-green/20 to-neon-blue/20",
+      videoUrl: "/videos/usbbackup-preview.mp4", // Path to your video in public folder
     }
   ];
 
   return (
-    <section className="py-24 px-6">
+    <section id="projects-section" className="py-24 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-black mb-6">
@@ -66,30 +70,40 @@ const Projects = () => {
                     ))}
                   </div>
                   
-                  <div className="flex gap-4">
-                    <button className="flex items-center gap-2 px-4 py-2 bg-transparent border border-neon-green text-neon-green rounded-lg hover:bg-neon-green hover:text-background transition-all duration-300 neon-glow hover:neon-glow-strong">
-                      <ExternalLink className="w-4 h-4" />
-                      <span className="font-medium">Live Demo</span>
-                    </button>
-                    <button className="flex items-center gap-2 px-4 py-2 bg-transparent border border-muted-foreground text-muted-foreground rounded-lg hover:border-foreground hover:text-foreground transition-all duration-300">
-                      <Github className="w-4 h-4" />
-                      <span className="font-medium">Code</span>
-                    </button>
-                  </div>
+                  {/* The Live Demo and Code buttons div has been removed from here */}
                 </div>
                 
+                {/* --- Video Embedding Here --- */}
                 <div className="relative">
-                  <div className="aspect-video bg-gradient-to-br from-muted/50 to-background/50 rounded-lg border-2 border-dashed border-muted-foreground/30 flex items-center justify-center group-hover:border-neon-green/50 transition-colors duration-300">
-                    <div className="text-center">
-                      <Play className="w-16 h-16 text-muted-foreground group-hover:text-neon-green transition-colors duration-300 mx-auto mb-4" />
-                      <p className="text-muted-foreground font-medium">Video Preview</p>
-                      <p className="text-sm text-muted-foreground/70 mt-1">Frame ready for content</p>
-                    </div>
+                  <div className="aspect-video bg-gradient-to-br from-muted/50 to-background/50 rounded-lg border-2 border-dashed border-muted-foreground/30 flex items-center justify-center group-hover:border-neon-green/50 transition-colors duration-300 overflow-hidden">
+                    {project.videoUrl ? ( // Check if videoUrl exists
+                      <video
+                        src={project.videoUrl}
+                        className="w-full h-full object-cover rounded-lg"
+                        autoPlay  // Video will start playing automatically
+                        loop      // Video will loop continuously
+                        muted     // Video will be muted (required for autoplay in most browsers)
+                        playsInline // Important for mobile devices (plays inline, not fullscreen)
+                        preload="metadata" // Optimizes loading by only getting metadata initially
+                        controls={true} // Add browser's default controls (play/pause, volume, etc.)
+                      >
+                        Your browser does not support the video tag.
+                      </video>
+                    ) : (
+                      // Fallback if no videoUrl is provided for a project
+                      <div className="text-center">
+                        <Play className="w-16 h-16 text-muted-foreground group-hover:text-neon-green transition-colors duration-300 mx-auto mb-4" />
+                        <p className="text-muted-foreground font-medium">Video Preview Not Available</p>
+                        <p className="text-sm text-muted-foreground/70 mt-1">Check back soon!</p>
+                      </div>
+                    )}
                   </div>
                   
                   <div className="absolute -top-2 -right-2 w-4 h-4 bg-neon-green rounded-full animate-pulse"></div>
                   <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-neon-blue rounded-full animate-pulse delay-300"></div>
                 </div>
+                {/* --- End Video Embedding --- */}
+
               </div>
             </div>
           ))}

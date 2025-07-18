@@ -25,12 +25,12 @@ const Hero = () => {
         </p>
         
         <div className="flex flex-col items-center">
-          <button className="group relative px-8 py-4 bg-transparent border-2 border-neon-green rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 neon-glow hover:neon-glow-strong">
-            <span className="relative z-10 font-bold text-neon-green group-hover:text-background transition-colors duration-300">
-              EXPLORE OUR WORK
-            </span>
-            <div className="absolute inset-0 bg-neon-green transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
-          </button>
+         <a href="#projects-section" className="group relative px-8 py-4 bg-transparent border-2 border-neon-green rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 neon-glow hover:neon-glow-strong">
+  <span className="relative z-10 font-bold text-neon-green group-hover:text-background transition-colors duration-300">
+    EXPLORE OUR WORK
+  </span>
+  <div className="absolute inset-0 bg-neon-green transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+</a>
           
           <ArrowDown className="mt-12 w-8 h-8 text-neon-green animate-bounce" />
         </div>

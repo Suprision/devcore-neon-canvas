@@ -24,7 +24,7 @@ const Footer = () => {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Email</p>
-                  <p className="font-medium text-foreground">mail@email.com</p>
+                  <p className="font-medium text-foreground">customer-devcore@outlook.com</p>
                 </div>
               </div>
               
@@ -34,7 +34,7 @@ const Footer = () => {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Phone</p>
-                  <p className="font-medium text-foreground">1234567890</p>
+                  <p className="font-medium text-foreground">+255-745-775-641 <span style={{ color: '#00FFFF' }}>(WhatsApp available)</span></p>
                 </div>
               </div>
             </div>
@@ -42,13 +42,16 @@ const Footer = () => {
           
           <div className="text-center md:text-right">
             <div className="inline-block p-8 rounded-xl gradient-card border border-muted">
-              <h4 className="text-xl font-bold mb-4 text-foreground">Ready to Start?</h4>
-              <p className="text-muted-foreground mb-6">
+             <h4 className="text-xl font-bold mb-4 text-foreground text-center">Ready to Start?</h4>
+              <p className="text-muted-foreground mb-6 text-foreground text-center">
                 Let's discuss your next project and bring your vision to life.
               </p>
-              <button className="px-6 py-3 bg-gradient-to-r from-neon-green to-neon-blue text-background font-bold rounded-lg hover:scale-105 transition-transform duration-300 neon-glow">
-                GET IN TOUCH
-              </button>
+              <a 
+  href="mailto:customer-devcore@proton.me" 
+  className="px-6 py-3 bg-gradient-to-r from-neon-green to-white text-background font-bold rounded-lg hover:scale-105 transition-transform duration-300 neon-glow text-black block mx-auto w-max"
+>
+  GET IN TOUCH
+</a>
             </div>
           </div>
         </div>
@@ -60,7 +63,7 @@ const Footer = () => {
             <div className="h-px w-12 bg-gradient-to-l from-transparent to-neon-blue"></div>
           </div>
           <p className="text-muted-foreground">
-            © 2024 DevCore. Crafted with passion and precision.
+            © 2025 DevCore. Crafted with passion and precision.
           </p>
         </div>
       </div>
